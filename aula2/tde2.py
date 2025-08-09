@@ -1,0 +1,1 @@
+#repassar o código em JS para python
