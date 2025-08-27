@@ -95,10 +95,12 @@ do{
 
 } while(ajustes != 0)
 
+mostraDados()
+
 
 
 //Execução
 
-// let entrada = lerEntrada();
+// let entrada = await lerEntrada();
 
 // console.log(entrada)
