@@ -57,7 +57,7 @@ do{
     ajustes = 0
 
     treinamento.forEach(valor => {
-        somatorio = soma(valor.vies, valor.entrada1, valor.entrada2)
+        somatorio = soma(valor.entrada1, valor.entrada2)
         saida = transferencia(somatorio)
         if(saida != valor.resultadoEsperado){
             ajuste(valor.vies, valor.entrada1, valor.entrada2, valor.resultadoEsperado, saida)

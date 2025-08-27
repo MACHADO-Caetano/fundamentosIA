@@ -80,27 +80,39 @@ function lerEntrada(mensagem) {
     });
 }
 
-do{
-    ajustes = 0
+function mostraRespostaTreinamento(entrada){
+    somatorio = soma(entrada[0], entrada[1], entrada[2])
+    resultadoObtido = transferencia(somatorio)
+    return resultadoObtido
+}
 
-    treinamento.forEach(valor => {
-        somatorio = soma(valor.vies, valor.entrada1, valor.entrada2)
-        saida = transferencia(somatorio)
-        if(saida != valor.resultadoEsperado){
-            ajuste(valor.vies, valor.entrada1, valor.entrada2, valor.resultadoEsperado, saida)
-            ajustes++
-            ajustesTotais++
-        }
-    });
+// do{
+//     ajustes = 0
 
-} while(ajustes != 0)
+//     treinamento.forEach(valor => {
+//         somatorio = soma(valor.vies, valor.entrada1, valor.entrada2)
+//         saida = transferencia(somatorio)
+//         if(saida != valor.resultadoEsperado){
+//             ajuste(valor.vies, valor.entrada1, valor.entrada2, valor.resultadoEsperado, saida)
+//             ajustes++
+//             ajustesTotais++
+//         }
+//     });
+
+// } while(ajustes != 0)
+
+
+//Execução
+
+let entrada = await lerEntrada("Insira a entrada: (Siga o modelo -> 1,0,0 - entre vírgulas");
+
+entrada = entrada.split(",")
+
+console.log("Resposta: " + enumLabels[mostraRespostaTreinamento(entrada)])
 
 mostraDados()
 
 
 
-//Execução
 
-// let entrada = await lerEntrada();
 
-// console.log(entrada)
